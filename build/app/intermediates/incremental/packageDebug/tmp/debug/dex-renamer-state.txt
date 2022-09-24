@@ -1,0 +1,4 @@
+#Sat Sep 24 17:29:57 BRT 2022
+base.0=/home/vitor/Documentos/flutter_na_pratica/flutter-crypto-coins/build/app/intermediates/dex/debug/mergeDexDebug/classes.dex
+renamed.0=classes.dex
+path.0=classes.dex
