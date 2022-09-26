@@ -10,9 +10,14 @@ class MoedasPage extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Criptomoedas"),
+        title: const Text(
+          "Criptomoedas",
+          style: TextStyle(
+            color: Colors.black,
+          ),
+        ),
         centerTitle: true,
-        backgroundColor: Colors.teal,
+        backgroundColor: Colors.white,
       ),
       body: ListView.separated(
           itemBuilder: (BuildContext context, int index) {
