@@ -22,7 +22,10 @@ class MoedasPage extends StatelessWidget {
       body: ListView.separated(
           itemBuilder: (BuildContext context, int index) {
             return ListTile(
-              leading: Image.asset(tabela[index].icone),
+              leading: SizedBox(
+                width: 40,
+                child: Image.asset(tabela[index].icone),
+              ),
               title: Text(tabela[index].name),
               subtitle: Text("R\$ ${tabela[index].price}"),
               trailing: Text(tabela[index].sigla),
