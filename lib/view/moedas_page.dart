@@ -26,7 +26,13 @@ class MoedasPage extends StatelessWidget {
                 width: 40,
                 child: Image.asset(tabela[index].icone),
               ),
-              title: Text(tabela[index].name),
+              title: Text(
+                tabela[index].name,
+                style: const TextStyle(
+                  fontSize: 17,
+                  fontWeight: FontWeight.w500,
+                ),
+              ),
               subtitle: Text("R\$ ${tabela[index].price}"),
               trailing: Text(tabela[index].sigla),
             );
