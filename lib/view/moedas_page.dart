@@ -18,6 +18,9 @@ class MoedasPage extends StatelessWidget {
           itemBuilder: (BuildContext context, int index) {
             return ListTile(
               leading: Image.asset(tabela[index].icone),
+              title: Text(tabela[index].nome),
+              subtitle: Text("R\$ ${tabela[index].price}"),
+              trailing: Text(tabela[index].sigla),
             );
           },
           padding: const EdgeInsets.all(8),

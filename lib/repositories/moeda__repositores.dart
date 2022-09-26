@@ -4,25 +4,30 @@ class MoedaRepository {
   static List<Moeda> tabela = [
     Moeda(
       icone: 'assets/images/bitcoin.png',
-      nome: 'bitcoin',
-      price: 10008295.00,
-      sigla: 'btc',
+      nome: 'Bitcoin',
+      price: 1000829500,
+      sigla: 'BTC',
     ),
     Moeda(
       icone: 'assets/images/dogecoin.png',
       nome: 'Dogecoin',
       price: 0.34,
-      sigla: 'dgc',
+      sigla: 'DOGE',
     ),
     Moeda(
         icone: 'assets/images/ethereum.png',
         nome: 'Ethereum',
-        price: 706517.00,
-        sigla: 'Eth'),
+        price: 699790,
+        sigla: 'ETH'),
     Moeda(
         icone: 'assets/images/tether.png',
         nome: 'Thether',
         price: 5.29,
-        sigla: 'THT'),
+        sigla: 'USDT'),
+    Moeda(
+        icone: 'assets/images/solana.png',
+        nome: 'Solana',
+        price: 174.52,
+        sigla: 'SOL')
   ];
 }
