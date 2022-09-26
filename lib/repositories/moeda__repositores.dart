@@ -1,5 +1,5 @@
 import '../models/moeda.dart';
-
+//Classe responsável por se conectar com API futuramente e disponiblizar os dados que serão usados no app 
 class MoedaRepository {
   static List<Moeda> tabela = [
     Moeda(

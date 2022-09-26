@@ -12,7 +12,7 @@ class MoedasPage extends StatelessWidget {
       appBar: AppBar(
         title: const Text("Criptomoedas"),
         centerTitle: true,
-        backgroundColor: Colors.black38,
+        backgroundColor: Colors.teal,
       ),
       body: ListView.separated(
           itemBuilder: (BuildContext context, int index) {
@@ -23,8 +23,11 @@ class MoedasPage extends StatelessWidget {
               trailing: Text(tabela[index].sigla),
             );
           },
-          padding: const EdgeInsets.all(8),
-          separatorBuilder: (_, __) => const Divider(),
+          padding: const EdgeInsets.all(16),
+          separatorBuilder: (_, __) => const Divider(
+                height: 40,
+                color: Colors.black38,
+              ),
           itemCount: tabela.length),
     );
   }
