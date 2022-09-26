@@ -1,12 +1,12 @@
 class Moeda {
   String icone;
-  String nome;
+  String name;
   String sigla;
   double price;
 
   Moeda(
       {required this.icone,
-      required this.nome,
+      required this.name,
       required this.price,
       required this.sigla});
 }

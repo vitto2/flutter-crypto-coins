@@ -6,7 +6,7 @@ class MoedasPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final tabela = MoedaRepository.tabela;
+    final tabela = CoinRepository.table;
 
     return Scaffold(
       appBar: AppBar(
@@ -18,7 +18,7 @@ class MoedasPage extends StatelessWidget {
           itemBuilder: (BuildContext context, int index) {
             return ListTile(
               leading: Image.asset(tabela[index].icone),
-              title: Text(tabela[index].nome),
+              title: Text(tabela[index].name),
               subtitle: Text("R\$ ${tabela[index].price}"),
               trailing: Text(tabela[index].sigla),
             );
