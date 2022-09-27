@@ -1,13 +1,16 @@
 import 'package:crypto_coins/repositories/moeda__repositores.dart';
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 
 class MoedasPage extends StatelessWidget {
-  const MoedasPage({super.key});
+  MoedasPage({super.key});
+
+  final tabela = CoinRepository.table;
+
+  NumberFormat real = NumberFormat.currency(locale: 'pt-BR', name: 'R\$');
 
   @override
   Widget build(BuildContext context) {
-    final tabela = CoinRepository.table;
-
     return Scaffold(
       appBar: AppBar(
         title: const Text(
@@ -33,7 +36,7 @@ class MoedasPage extends StatelessWidget {
                   fontWeight: FontWeight.w500,
                 ),
               ),
-              subtitle: Text("R\$ ${tabela[index].price}"),
+              subtitle: Text(real.format(tabela[index].price)),
               trailing: Text(tabela[index].sigla),
             );
           },
