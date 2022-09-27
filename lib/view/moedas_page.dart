@@ -33,10 +33,14 @@ class _MoedasPageState extends State<MoedasPage> {
       body: ListView.separated(
           itemBuilder: (BuildContext context, int index) {
             return ListTile(
-              leading: SizedBox(
-                width: 40,
-                child: Image.asset(tabela[index].icone),
-              ),
+              leading: (selectedItem.contains(tabela[index]))
+                  ? CircleAvatar(
+                      child: Image.asset("assets/images/accept.png"),
+                    )
+                  : SizedBox(
+                      width: 40,
+                      child: Image.asset(tabela[index].icone),
+                    ),
               title: Text(
                 tabela[index].name,
                 style: const TextStyle(
