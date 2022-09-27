@@ -1,11 +1,19 @@
+import 'package:crypto_coins/models/moeda.dart';
 import 'package:crypto_coins/repositories/moeda__repositores.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
-class MoedasPage extends StatelessWidget {
-  MoedasPage({super.key});
+class MoedasPage extends StatefulWidget {
+  const MoedasPage({super.key});
 
+  @override
+  State<MoedasPage> createState() => _MoedasPageState();
+}
+
+class _MoedasPageState extends State<MoedasPage> {
   final tabela = CoinRepository.table;
+
+  List<Moeda> selectedItem = [];
 
   NumberFormat real = NumberFormat.currency(locale: 'pt-BR', name: 'R\$');
 
@@ -38,6 +46,15 @@ class MoedasPage extends StatelessWidget {
               ),
               subtitle: Text(real.format(tabela[index].price)),
               trailing: Text(tabela[index].sigla),
+              selected: selectedItem.contains(tabela[index]),
+              onLongPress: () {
+                if (selectedItem.contains(tabela[index])) {
+                  selectedItem.remove(tabela[index]);
+                } else {
+                  selectedItem.add(tabela[index]);
+                }
+                setState(() {});
+              },
             );
           },
           padding: const EdgeInsets.all(16),

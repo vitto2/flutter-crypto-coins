@@ -2,6 +2,7 @@ import '../models/moeda.dart';
 
 //Classe responsável por se conectar com API futuramente e disponiblizar os dados que serão usados no app
 class CoinRepository {
+  
   static List<Moeda> table = [
     Moeda(
       icone: 'assets/images/bitcoin.png',
