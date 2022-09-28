@@ -64,14 +64,13 @@ class _MoedasPageState extends State<MoedasPage> {
   myAppBar() {
     if (selectedItem.isEmpty) {
       return AppBar(
-        leading: Text(
-          "Quantidade $selectedQtd",
-          style: const TextStyle(color: Colors.white),
-        ),
-        title: const Text(
-          "Criptomoedas",
-          style: TextStyle(
-            color: Colors.black,
+        backgroundColor: Colors.deepPurpleAccent,
+        title: const Center(
+          child: Text(
+            "Criptomoedas",
+            style: TextStyle(
+              color: Colors.white,
+            ),
           ),
         ),
       );
@@ -79,12 +78,20 @@ class _MoedasPageState extends State<MoedasPage> {
       return AppBar(
         leading: IconButton(
           onPressed: () {
-            selectedItem = [];
+            setState(() {
+              selectedItem = [];
+            });
           },
-          icon: const Icon(Icons.arrow_back_ios),
+          icon: const Icon(
+            Icons.arrow_back_ios,
+            color: Colors.black,
+          ),
         ),
         backgroundColor: Colors.white54,
-        title: Text("${selectedItem.length} selecionados"),
+        title: Text(
+          "${selectedItem.length} selecionados",
+          style: const TextStyle(color: Colors.black),
+        ),
       );
     }
   }

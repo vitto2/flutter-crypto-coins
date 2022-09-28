@@ -1,4 +1,4 @@
-#Tue Sep 27 08:25:58 BRT 2022
-base.0=C\:\\Users\\ext_vitsouza\\Documents\\flutter-crypto-coins\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
+#Wed Sep 28 09:51:30 BRT 2022
+base.0=/home/vitor/Documentos/flutter-crypto-coins/build/app/intermediates/dex/debug/mergeDexDebug/classes.dex
 renamed.0=classes.dex
 path.0=classes.dex
