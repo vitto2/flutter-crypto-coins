@@ -13,6 +13,7 @@ class MoedasPage extends StatefulWidget {
 class _MoedasPageState extends State<MoedasPage> {
   final tabela = CoinRepository.table;
   List<Moeda> selectedItem = [];
+  List<Moeda> favorites = [];
   int selectedQtd = 0;
   NumberFormat real = NumberFormat.currency(locale: 'pt-BR', name: 'R\$');
 
@@ -54,10 +55,24 @@ class _MoedasPageState extends State<MoedasPage> {
           },
           padding: const EdgeInsets.all(16),
           separatorBuilder: (_, __) => const Divider(
-                height: 40,
-                color: Colors.black38,
+                height: 30,
+                color: Colors.black87,
               ),
           itemCount: tabela.length),
+      floatingActionButton: FloatingActionButton.extended(
+        backgroundColor: Colors.deepPurpleAccent,
+        onPressed: () {
+          if (selectedItem.isEmpty) {
+            return;
+          } else {
+            
+          }
+        },
+        label: const Text(
+          "Favoritar",
+          style: TextStyle(fontWeight: FontWeight.w400),
+        ),
+      ),
     );
   }
 
